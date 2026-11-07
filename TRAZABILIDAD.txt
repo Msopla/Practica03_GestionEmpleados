@@ -1,0 +1,30 @@
+Práctica 03 - Sistema de Gestión de Empleados
+Estudiante: Martinez Espinoza Matias Fabian
+
+Código | Elemento | Requisitos funcionales | Requisitos no funcionales
+DIS-01 | modelo.Persona | RF-01 a RF-04 | RNF-06
+DIS-02 | modelo.Administrativo | RF-01 | RNF-06
+DIS-03 | modelo.Obrero | RF-02 | RNF-06
+DIS-04 | modelo.Tecnico | RF-03 | RNF-06
+DIS-05 | modelo.Repositorio<T extends Persona> | RF-04, RF-05 | RNF-01, RNF-02, RNF-03
+DIS-06 | controlador.ControladorEmpleados | RF-01 a RF-06 | RNF-04
+DIS-07 | modelo.ValidadorEmpleado | RF-06 | RNF-06
+DIS-08 | vista.VentanaPrincipal | RF-01 a RF-05 | RNF-05
+DIS-09 | vista.FormularioAdministrativo | RF-01, RF-06 | RNF-05
+DIS-10 | vista.FormularioObrero | RF-02, RF-06 | RNF-05
+DIS-11 | vista.FormularioTecnico | RF-03, RF-06 | RNF-05
+DIS-12 | vista.VentanaConsulta | RF-04 | RNF-05
+DIS-13 | vista.VentanaListado | RF-05 | RNF-05
+DIS-14 | vista.MensajesValidacion | RF-06 | RNF-05, RNF-06
+
+RNF-01: Repositorio es una clase genérica y registrar es un método genérico.
+RNF-02: almacenamiento temporal en ArrayList<T>.
+RNF-03: contadorRegistros usa Integer; registrar realiza unboxing a int y boxing al incrementar.
+RNF-04: las vistas delegan las operaciones al controlador compartido.
+RNF-05: interfaz Swing con navegación, formularios, consulta y JTable.
+RNF-06: encapsulamiento, clase abstracta, herencia y validación según el diseño de referencia.
+
+Las clases auxiliares EstiloVista y FormularioEmpleado reutilizan presentación y acciones comunes.
+La jerarquía del modelo y los catorce elementos DIS se conservan.
+La clave se mantiene en el modelo conforme al UML y se excluye de informacion(), consultas y tablas.
+Los registros existen únicamente durante la ejecución de la aplicación.
